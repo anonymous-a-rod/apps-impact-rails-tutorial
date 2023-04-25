@@ -1,3 +1,4 @@
+Student.destroy_all
 
 student = Student.create(
   first_name: 'Aaron',
