@@ -1,5 +1,11 @@
 <h1>New Teacher</h1>
 <%= form_with model: @teacher do |form| %>
+  <% if @teacher.errors.any? %>
+    <% @teacher.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+      <% puts "hi" %>
+    <% end %>
+  <% end %>
   <div>
     <%= form.label :first_name %>:<br/>
     <%= form.text_field :first_name %>
