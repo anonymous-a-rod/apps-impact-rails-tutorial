@@ -17,6 +17,7 @@
         <td><%= teacher.biography %></td>
         <td><%= link_to 'View', teacher %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+        <td><%= button_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
