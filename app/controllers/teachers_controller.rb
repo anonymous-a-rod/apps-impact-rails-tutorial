@@ -21,6 +21,10 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
   end
 
+  def edit
+    @teacher = Teacher.find(params[:id])
+  end
+
   private
 
   def teacher_params

@@ -16,6 +16,7 @@
         <td><%= teacher.last_name %></td>
         <td><%= teacher.biography %></td>
         <td><%= link_to 'View', teacher %></td>
+        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
       </tr>
     <% end %>
   </tbody>

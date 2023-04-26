@@ -4,4 +4,4 @@
 <p><strong>Last Name:</strong> <%= @teacher.last_name %></p>
 <p><strong>Biography:</strong> <%= @teacher.biography %></p>
 
-<%= link_to 'Back', teachers_path %>
+<%= link_to 'Back', teachers_path %> | <%= link_to 'Edit', edit_teacher_path(@teacher) %>
