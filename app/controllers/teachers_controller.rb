@@ -11,7 +11,7 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     if @teacher.save
-      redirect_to teachers_path
+      redirect_to teachers_path, notice: 'Teacher has successfully been created'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class TeachersController < ApplicationController
   def update
     @teacher = Teacher.find(params[:id])
     if @teacher.update(teacher_params)
-      redirect_to teachers_path
+      redirect_to teachers_path, notice: 'Teacher has successfully been updated'
     else 
       render :edit
     end
@@ -37,7 +37,7 @@ class TeachersController < ApplicationController
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy
-    redirect_to teachers_path
+    redirect_to teachers_path, notice: 'Teacher has successfully been deleted'
   end
 
   private

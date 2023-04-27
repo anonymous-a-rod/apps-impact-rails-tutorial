@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
-      redirect_to students_path
+      redirect_to students_path, notice: 'Student has successfully been created'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
     if @student.update(student_params)
-      redirect_to students_path
+      redirect_to students_path, notice: 'Student has successfully been updated'
     else 
       render :edit
     end
@@ -37,7 +37,7 @@ class StudentsController < ApplicationController
   def destroy
     @student = Student.find(params[:id])
     @student.destroy
-    redirect_to students_path
+    redirect_to students_path, notice: 'Student has successfully been deleted'
   end
 
   private
