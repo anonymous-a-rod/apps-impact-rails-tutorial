@@ -24,3 +24,8 @@ Teacher.destroy_all
     biography: "blah blah #{i}"
   )
 end
+
+Student.all.each do |student|
+  student.blogs.create(title: "Dummy Blog for Student #{student.id}", content: "Custom content penind")
+  student.blogs.create(title: "Dummy Blog for Student #{student.id}", content: "Custom content penind")
+end
